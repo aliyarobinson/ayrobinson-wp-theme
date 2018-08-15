@@ -41,14 +41,14 @@
 	              </span>
 	            </a>
 	          </li>
-	          <li class="social-item">
+	          <!-- <li class="social-item">
 	            <a href="https://twitter.com/earlybirdtechie" target="_blank">
 	              <span aria-hidden="true" class="icon fa-twitter"></span>
 	              <span class="hide-copy" aria-label="My Twitter Account">  
 	                Twitter
 	              </span>
 	            </a>
-	          </li>
+	          </li> -->
 	          <li class="social-item">
 	            <a href="https://github.com/aliyarobinson" target="_blank">
 	              <span aria-hidden="true" class="icon fa-github-alt"></span>
