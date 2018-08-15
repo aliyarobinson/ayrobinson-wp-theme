@@ -37,7 +37,10 @@
 					                  <div class="slanted-divider"></div>
 					                </div>
 					                <div class="proj-title-block">
-					                  <h3 class="proj-title"><?php the_sub_field('title'); ?></h3>
+					                  <h3 class="proj-title">
+														<span class="lg-copy"><?php the_sub_field('title'); ?></span>		
+														<?php the_sub_field('subtitle'); ?>
+														</h3>
 					                </div>
 					                <div class="proj-tools-block">
 					                  <ul>

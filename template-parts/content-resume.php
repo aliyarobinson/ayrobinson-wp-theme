@@ -16,10 +16,10 @@
           <div class="block block-2-wide skills">
             <h3 class="page-title">Skills:</h3>
             <?php
-			if( have_rows('skill') ): ?>
+			if( have_rows('skills') ): ?>
 				<ul>
-			    <?php while ( have_rows('skill') ) : the_row(); ?>
-			        <li class="skill" data-rating="<?php the_sub_field('rating'); ?>"><?php the_sub_field('skill_name'); ?></li>
+			    <?php while ( have_rows('skills') ) : the_row(); ?>
+			        <li class="skill" data-rating="<?php the_sub_field('skill_level'); ?>"><?php the_sub_field('skill_name'); ?></li>
 			    <?php endwhile; ?>
 			    </ul>
 			<?php

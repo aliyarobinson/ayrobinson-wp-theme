@@ -13,36 +13,7 @@
 
 ?>
 
-<!-- <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<div class="title-block wrapper">
-      <?php the_title( '<h2 class="page-title block block-3-wide">', '</h2>' ); ?>
-    </div>
-
-	<div class="entry-content">
-		<?php
-			the_content();
-
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'ayr' ),
-				'after'  => '</div>',
-			) );
-		?>
-	</div>
-
-	<footer class="entry-footer">
-		<?php
-			edit_post_link(
-				sprintf(
-					esc_html__( 'Edit %s', 'ayr' ),
-					the_title( '<span class="screen-reader-text">"', '"</span>', false )
-				),
-				'<span class="edit-link">',
-				'</span>'
-			);
-		?>
-	</footer>
-</article> -->
 
 <div class="content-wrapper wrapper single-project">
 	<nav>
@@ -79,7 +50,7 @@
 			 
 			    <?php while( have_rows('tools') ): the_row(); ?>
 			 
-			        <li><?php the_sub_field('tool_title'); ?></li>
+			        <li><?php the_sub_field('tool'); ?></li>
 			        
 			    <?php endwhile; ?>
 			 
@@ -102,8 +73,13 @@
 				echo '<a href="'. $clink .'" class="btn cta" target="_blank">View Code</a>';
 			}
 
+			$dlink = get_field('design_link');
+			if($clink)
+			{
+				echo '<a href="'. $dlink .'" class="btn cta" target="_blank">View Design</a>';
+			}
+
 		?>
-	    <!-- <a href="http://resources.chartbeat.com" class="btn cta" target="_blank">View Site</a> -->
 	  </div>
 	</div>
 </div>

@@ -32,7 +32,7 @@ var AYR = AYR || {};
     init: function () {
       console.log('init');
 
-      AYR.pageLocation.registerObserver(AYR.pageState);
+      // AYR.pageLocation.registerObserver(AYR.pageState);
 
       var $loading = $('.loader');
       $(document)
@@ -90,38 +90,38 @@ var AYR = AYR || {};
       /**************************************/
       /*   History.popstate
       /***************************************************/
-      window.onpopstate = function (e) {
-        console.log('*****************onpopstate/onload triggered*********************');
-        AYR.updateCurrPage();
-        console.log('thisPageName: ', AYR.currPageName); 
-        AYR.pageLocation.notifyObservers(AYR.currPageName);
-      }
+      // window.onpopstate = function (e) {
+      //   console.log('*****************onpopstate/onload triggered*********************');
+      //   AYR.updateCurrPage();
+      //   console.log('thisPageName: ', AYR.currPageName); 
+      //   AYR.pageLocation.notifyObservers(AYR.currPageName);
+      // }
 
 
       /**************************************/
       /*   Navigation link click
       /***************************************************/
-      $(document).on( AYR.clickHandler , '.site-nav a, .logo-wrapper a, .project .cta-btn, .btn.back', function(e) { 
-        e.preventDefault();
-        console.log('*****************nav click*********************');
+      // $(document).on( AYR.clickHandler , '.site-nav a, .logo-wrapper a, .project .cta-btn, .btn.back', function(e) { 
+      //   e.preventDefault();
+      //   console.log('*****************nav click*********************');
 
-        if( History ) {
-          console.log('history!');
+      //   if( History ) {
+      //     console.log('history!');
 
-          // var href = ($(this).attr('href')) ? $(this).attr('href') : $(this).attr('xlink:href');
-          var href = $(this).attr('href');
-          // var thisPage = href.replace('.html','');
-          var thisPage = href.split('/').pop();
-          // if (thisPage === ''){
-          //   thisPage = 'index';
-          // }
-          console.log('nav click - thisPage: ', thisPage); 
-          console.log('nav click - thisPage: ', thisPage); 
-          history.pushState(null, null, href);
-          AYR.pageState.innerPage(thisPage);
+      //     // var href = ($(this).attr('href')) ? $(this).attr('href') : $(this).attr('xlink:href');
+      //     var href = $(this).attr('href');
+      //     // var thisPage = href.replace('.html','');
+      //     var thisPage = href.split('/').pop();
+      //     // if (thisPage === ''){
+      //     //   thisPage = 'index';
+      //     // }
+      //     console.log('nav click - thisPage: ', thisPage); 
+      //     console.log('nav click - thisPage: ', thisPage); 
+      //     history.pushState(null, null, href);
+      //     AYR.pageState.innerPage(thisPage);
 
-        }
-      });
+      //   }
+      // });
 
 
 
@@ -198,8 +198,10 @@ var AYR = AYR || {};
     },
 
     updateCurrPage: function() {
-      var thisPage = location.href.split('/')[location.href.split('/').length -1 ];
+      var thisPage = location.href.split('/')[location.href.split('/').length -2 ];
       AYR.currPageName = thisPageName = thisPage.replace('.html','');
+      console.log('thisPage: ', thisPage);
+      console.log('split: ', location.href.split('/'));
     },
 
     transitionContent: function(page){
