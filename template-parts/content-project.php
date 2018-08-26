@@ -74,7 +74,7 @@
 			}
 
 			$dlink = get_field('design_link');
-			if($clink)
+			if($dlink)
 			{
 				echo '<a href="'. $dlink .'" class="btn cta" target="_blank">View Design</a>';
 			}
