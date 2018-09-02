@@ -28,7 +28,6 @@
   <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/style.css">
-  <script src="js/prefixfree.min.js"></script>
   <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
   <![endif]-->
@@ -58,5 +57,5 @@
     </div>
   </header>
   <main class="site-content" role="main">
-    <div id="content-holder"></div>
+    <div class="content-holder"></div>
     <div class="content-wrapper" id="main-content">
